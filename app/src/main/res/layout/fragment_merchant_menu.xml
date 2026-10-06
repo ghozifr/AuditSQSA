@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Halaman menu toko.
+
+     Yang MENETAP di layar hanya dua baris:
+       1. header  → tombol kembali, judul toko, tombol grid/list
+       2. cart_bar → ringkasan keranjang + tombol CHECKOUT
+
+     Semua sisanya (hero toko, banner tutup, search menu, chip sortir, chip
+     kategori, dan daftar menu) adalah isi RecyclerView, sehingga ikut
+     ter-scroll. Header halaman itu sendiri ada di layout_menu_header.xml dan
+     dipasang sebagai item pertama oleh MenuAdapter. -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brand_lavender">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_activity_history_card"
+            android:contentDescription="Kembali"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_black"
+            android:maxLines="1"
+            android:text="Daftar Menu"
+            android:textColor="@color/brand_ink"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/btn_view_toggle"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_activity_history_card"
+            android:contentDescription="Ubah tampilan menu"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_list"
+            app:tint="@color/brand_ink" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_menu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="14dp"
+        android:paddingTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/cart_bar"
+        app:layout_constraintTop_toBottomOf="@id/header" />
+
+    <LinearLayout
+        android:id="@+id/cart_bar"
+        style="@style/BentoTile"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_food_primary_orange"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="24dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_cart_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_black"
+                android:text="0 item · Rp 0"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Sudah siap pesan?"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_checkout"
+            style="@style/BentoTile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_activity_history_card"
+            android:fontFamily="@font/poppins_black"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:text="CHECKOUT"
+            android:textColor="@color/brand_ink"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

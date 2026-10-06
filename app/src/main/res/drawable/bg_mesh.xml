@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base Color -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/bg_dark" />
+        </shape>
+    </item>
+
+    <!-- Top Left Blob (Sky Blue) -->
+    <item android:top="-150dp" android:left="-150dp" android:right="150dp" android:bottom="200dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="400dp"
+                android:startColor="#8038BDF8"
+                android:endColor="#0038BDF8" />
+        </shape>
+    </item>
+
+    <!-- Bottom Right Blob (Teal) -->
+    <item android:top="200dp" android:left="100dp" android:right="-200dp" android:bottom="-200dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="500dp"
+                android:startColor="#6614B8A6"
+                android:endColor="#0014B8A6" />
+        </shape>
+    </item>
+
+    <!-- Center Right Blob (Indigo) -->
+    <item android:top="100dp" android:left="50dp" android:right="-100dp" android:bottom="100dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="350dp"
+                android:startColor="#40818CF8"
+                android:endColor="#00818CF8" />
+        </shape>
+    </item>
+</layer-list>

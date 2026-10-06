@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brand_lavender"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="96dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#A78BFA"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="52dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_black"
+                android:text="Aktivitas"
+                android:textColor="@color/brand_ink"
+                android:textSize="21sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_marginTop="48dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_activity_stat_teal"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView android:id="@+id/tv_stat_trips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/poppins_black" android:text="0" android:textColor="@color/brand_ink" android:textSize="25sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/poppins_bold" android:text="PERJALANAN" android:textColor="#28504F" android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_activity_stat_amber"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView android:id="@+id/tv_stat_orders" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/poppins_black" android:text="0" android:textColor="@color/brand_ink" android:textSize="25sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/poppins_bold" android:text="PESANAN" android:textColor="#5E4420" android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_activity_stat_blue"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView android:id="@+id/tv_stat_points" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/poppins_black" android:text="0" android:textColor="@color/brand_ink" android:textSize="25sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/poppins_bold" android:text="POIN" android:textColor="#234C62" android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <LinearLayout
+                android:id="@+id/layout_active_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:fontFamily="@font/poppins_black" android:text="Pesanan Aktif" android:textColor="@color/brand_ink" android:textSize="20sp" />
+                <LinearLayout android:id="@+id/layout_active_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/poppins_black" android:text="Riwayat" android:textColor="@color/brand_ink" android:textSize="25sp" />
+                <TextView android:id="@+id/btn_refresh_history" android:layout_width="46dp" android:layout_height="46dp" android:background="@drawable/bg_activity_icon_well" android:gravity="center" android:text="↻" android:textColor="@color/brand_ink" android:textSize="27sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_history_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layout_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_activity_history_card"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="38dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Belum ada riwayat" android:textColor="@color/brand_ink" android:textSize="16sp" android:fontFamily="@font/poppins_bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Perjalanan dan pesanan akan muncul di sini" android:textColor="@color/text_muted" android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/layout_order_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:orientation="vertical" android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/btn_load_more_history"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_activity_history_card"
+                android:gravity="center"
+                android:text="Muat riwayat sebelumnya"
+                android:textColor="@color/brand_ink"
+                android:textSize="13sp"
+                android:fontFamily="@font/poppins_bold"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

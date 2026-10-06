@@ -1,0 +1,3 @@
+- [x] Add null check for location in `LocationPickerFragment.enableMyLocation()`
+- [x] Verify build
+- [x] Create walkthrough

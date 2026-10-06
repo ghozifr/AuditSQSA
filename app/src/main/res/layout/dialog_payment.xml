@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_location_picker_sheet"
+    android:orientation="vertical"
+    android:paddingStart="22dp"
+    android:paddingTop="14dp"
+    android:paddingEnd="22dp"
+    android:paddingBottom="28dp">
+    <View android:layout_width="46dp" android:layout_height="5dp" android:layout_gravity="center" android:layout_marginBottom="18dp" android:background="@color/black" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/poppins_black" android:text="Pembayaran perjalanan" android:textColor="@color/brand_ink" android:textSize="22sp" android:textStyle="bold" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:fontFamily="@font/poppins_bold" android:text="Pilih pembayaran untuk menyelesaikan perjalanan." android:textColor="@color/text_muted" android:textSize="12sp" android:textStyle="bold" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:background="@drawable/bg_activity_history_card" android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/poppins_black" android:text="TOTAL" android:textColor="@color/text_muted" android:textSize="10sp" android:textStyle="bold" />
+        <TextView android:id="@+id/tv_payment_total" android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/poppins_black" android:text="Total: Rp 0" android:textColor="@color/brand_ink" android:textSize="23sp" android:textStyle="bold" />
+        <TextView android:id="@+id/tv_payment_balance" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:fontFamily="@font/poppins_bold" android:text="Saldo kamu: Rp 0" android:textColor="@color/text_muted" android:textSize="12sp" android:textStyle="bold" />
+        <!-- Muncul hanya kalau order memakai voucher: harga asli + potongannya. -->
+        <TextView android:id="@+id/tv_payment_voucher" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:fontFamily="@font/poppins_bold" android:textColor="@color/send_green_text" android:textSize="11sp" android:textStyle="bold" android:visibility="gone" />
+    </LinearLayout>
+    <TextView android:id="@+id/tv_payment_hint" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:fontFamily="@font/poppins_black" android:text="Pilih metode pembayaran" android:textColor="@color/brand_ink" android:textSize="12sp" android:textStyle="bold" />
+    <TextView android:clickable="true" android:focusable="true" android:gravity="center" android:id="@+id/btn_pay_saldo" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:background="@drawable/bg_location_primary_teal" android:fontFamily="@font/poppins_black" android:text="Bayar pakai saldo" android:textAllCaps="false" android:textColor="@color/brand_ink" android:textSize="14sp" />
+    <TextView android:clickable="true" android:focusable="true" android:gravity="center" android:id="@+id/btn_pay_qris" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="14dp" android:background="@drawable/bg_activity_history_card" android:fontFamily="@font/poppins_black" android:text="Minta QRIS di HP driver" android:textAllCaps="false" android:textColor="@color/brand_ink" android:textSize="14sp" />
+</LinearLayout>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brand_lavender">
+
+    <!-- Map & Pin Layer -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_card"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map_view"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Center Pin Layer -->
+        <TextView
+            android:id="@+id/btn_set_location"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_send_primary_green"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_black"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:text="Konfirmasi Penjemputan"
+            android:textColor="@color/brand_ink"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:translationY="-72dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_center_pin"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:elevation="8dp"
+            android:src="@drawable/ic_map_pin_web_green"
+            android:translationY="-24dp" />
+
+    </FrameLayout>
+
+    <!-- Back -->
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_activity_history_card"
+        android:elevation="10dp"
+        android:padding="11dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="4dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/brand_ink" />
+
+    <!-- Bottom card -->
+    <LinearLayout
+        android:id="@+id/bottom_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_location_picker_sheet"
+        android:elevation="16dp"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="18dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <View
+            android:layout_width="46dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="13dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_black"
+            android:text="Konfirmasi Kirim"
+            android:textColor="@color/brand_ink"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <!-- Pickup (pengirim) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/bg_send_dot_green" />
+
+            <TextView
+                android:id="@+id/tv_pickup_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_bold"
+                android:maxLines="1"
+                android:text="Lokasi penjemputan (pengirim)..."
+                android:textColor="@color/brand_ink"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btn_my_location"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_activity_icon_well"
+                android:padding="7dp"
+                android:src="@drawable/ic_my_location"
+                app:tint="#2FA85B" />
+        </LinearLayout>
+
+        <!-- Destination (penerima) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/bg_location_primary_coral" />
+
+            <TextView
+                android:id="@+id/tv_dest_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_bold"
+                android:maxLines="1"
+                android:text="Lokasi tujuan (penerima)..."
+                android:textColor="@color/brand_ink"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Hint -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Geser pin di peta untuk menyesuaikan lokasi"
+            android:textColor="@color/text_muted"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <!-- Price & weight -->
+        <LinearLayout
+            android:id="@+id/layout_estimate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_estimate_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_black"
+                    android:text="Harga dari server"
+                    android:textColor="#2FA85B"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_estimate_price_after"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins_black"
+                    android:textColor="@color/send_green_text"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_estimate_dist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="-- km"
+                android:textColor="@color/text_muted"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_weight_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="1 kg · Motor"
+            android:textColor="@color/text_muted"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <!-- Payment selector -->
+        <LinearLayout
+            android:id="@+id/layout_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_pay_cash"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_send_primary_green"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/poppins_black"
+                android:gravity="center"
+                android:text="💵 Tunai"
+                android:textColor="@color/brand_ink"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btn_pay_saldo"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_send_pay_idle"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/poppins_black"
+                android:gravity="center"
+                android:text="📱 Saldo"
+                android:textColor="@color/brand_ink"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Tombol voucher: di bawah tunai dan saldo. -->
+        <TextView
+            android:id="@+id/btn_voucher"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_activity_icon_well"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_black"
+            android:gravity="center"
+            android:text="🎟️  Pakai voucher"
+            android:textColor="@color/send_green_text"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <!-- Confirm -->
+        <LinearLayout
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_send_primary_green"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_black"
+                android:text="Pesan Kurir"
+                android:textColor="@color/brand_ink"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

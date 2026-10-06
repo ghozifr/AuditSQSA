@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Baris menu mode DAFTAR (1 kolom).
+
+     Foto memakai pola kartu TOKO: kotak 96dp TETAP + background well +
+     fitCenter + padding, sehingga semua baris sama tinggi dan foto selalu
+     tampil utuh mengikuti rasio aslinya (tidak dipotong, tidak melar). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_activity_history_card"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_menu_photo"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:background="@drawable/bg_activity_icon_well"
+            android:contentDescription="Foto menu"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_menu_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_bold"
+                android:maxLines="2"
+                android:text="Nama Menu"
+                android:textColor="@color/brand_ink"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_menu_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_food_primary_orange"
+                android:fontFamily="@font/poppins_black"
+                android:paddingHorizontal="7dp"
+                android:paddingVertical="2dp"
+                android:text="🔥 TERLARIS"
+                android:textColor="@color/brand_ink"
+                android:textSize="8sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_menu_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_bold"
+                android:maxLines="2"
+                android:text="Deskripsi menu yang lezat dan bergizi."
+                android:textColor="@color/text_muted"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tv_menu_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/poppins_black"
+                android:text="Rp 0"
+                android:textColor="#E86E20"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_menu_meta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_bold"
+                android:maxLines="1"
+                android:textColor="@color/text_muted"
+                android:textSize="10sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/btn_minus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_activity_icon_well"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="−"
+            android:textColor="@color/brand_ink"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_qty"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_black"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/brand_ink"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/btn_plus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_food_primary_orange"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="@color/brand_ink"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>

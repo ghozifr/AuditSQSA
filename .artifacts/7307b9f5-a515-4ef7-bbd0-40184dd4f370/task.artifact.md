@@ -1,0 +1,3 @@
+- [x] Update `fragment_auth.xml` to match `AuthFragment` expectations (OTP flow)
+- [x] Run build to verify resolution of `Unresolved reference 'btnSendOtp'`
+- [x] Finalize walkthrough

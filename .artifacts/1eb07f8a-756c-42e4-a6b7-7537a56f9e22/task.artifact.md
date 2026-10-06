@@ -1,0 +1,1 @@
+- [x] Update `bottom_nav_color.xml` to use `@color/brand` for checked state

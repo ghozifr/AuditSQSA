@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/authFragment">
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.suruhaja.ui.auth.AuthFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_auth" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.suruhaja.ui.home.HomeFragment"
+        android:label="Beranda"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.suruhaja.ui.location.LocationPickerFragment"
+        android:label="Map"
+        tools:layout="@layout/fragment_location_picker" />
+
+    <fragment
+        android:id="@+id/orderTrackingFragment"
+        android:name="com.suruhaja.ui.tracking.OrderTrackingFragment"
+        android:label="Lacak Pesanan"
+        tools:layout="@layout/fragment_order_tracking" />
+
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.suruhaja.ui.order.OrdersFragment"
+        android:label="Aktivitas"
+        tools:layout="@layout/fragment_orders" />
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.suruhaja.ui.notification.NotificationsFragment"
+        android:label="Notifikasi"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.suruhaja.ui.profile.ProfileFragment"
+        android:label="Profil"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/voucherFragment"
+        android:name="com.suruhaja.ui.voucher.VoucherFragment"
+        android:label="Voucher Saya"
+        tools:layout="@layout/fragment_voucher" />
+
+    <fragment
+        android:id="@+id/topupFragment"
+        android:name="com.suruhaja.ui.topup.TopupFragment"
+        android:label="Top Up"
+        tools:layout="@layout/fragment_topup" >
+        <argument
+            android:name="amount"
+            android:defaultValue="0L"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/merchantListFragment"
+        android:name="com.suruhaja.ui.food.MerchantListFragment"
+        android:label="SuruhFood"
+        tools:layout="@layout/fragment_merchant_list" />
+
+    <fragment
+        android:id="@+id/merchantMenuFragment"
+        android:name="com.suruhaja.ui.food.MerchantMenuFragment"
+        android:label="Menu"
+        tools:layout="@layout/fragment_merchant_menu" >
+        <argument
+            android:name="merchantId"
+            app:argType="string" />
+        <argument
+            android:name="merchantName"
+            app:argType="string" />
+        <argument
+            android:name="merchantLat"
+            app:argType="float" />
+        <argument
+            android:name="merchantLng"
+            app:argType="float" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/merchantReviewsFragment"
+        android:name="com.suruhaja.ui.food.MerchantReviewsFragment"
+        android:label="Review"
+        tools:layout="@layout/fragment_merchant_reviews" >
+        <argument
+            android:name="merchantId"
+            app:argType="string" />
+        <argument
+            android:name="merchantName"
+            app:argType="string" />
+        <argument
+            android:name="merchantRating"
+            app:argType="float" />
+        <argument
+            android:name="merchantRatingCount"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/foodLocationFragment"
+        android:name="com.suruhaja.ui.food.FoodLocationFragment"
+        android:label="Konfirmasi Antar"
+        tools:layout="@layout/fragment_food_location" >
+        <argument
+            android:name="merchantId"
+            app:argType="string" />
+        <argument
+            android:name="merchantName"
+            app:argType="string" />
+        <argument
+            android:name="merchantLat"
+            app:argType="float" />
+        <argument
+            android:name="merchantLng"
+            app:argType="float" />
+        <argument
+            android:name="itemsJson"
+            app:argType="string" />
+        <argument
+            android:name="total"
+            app:argType="long" />
+        <!-- Lokasi customer yang sudah diketahui saat checkout (opsional).
+             Tujuannya supaya layar ini langsung menampilkan posisi customer,
+             tidak menunggu GPS baru. 0 = belum diketahui. -->
+        <argument
+            android:name="customerLat"
+            android:defaultValue="0"
+            app:argType="float" />
+        <argument
+            android:name="customerLng"
+            android:defaultValue="0"
+            app:argType="float" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/foodTrackingFragment"
+        android:name="com.suruhaja.ui.food.FoodTrackingFragment"
+        android:label="Lacak Pesanan"
+        tools:layout="@layout/fragment_food_tracking" >
+        <argument
+            android:name="orderId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sendVehicleFragment"
+        android:name="com.suruhaja.ui.send.SendVehicleFragment"
+        android:label="SuruhSend"
+        tools:layout="@layout/fragment_send_vehicle" />
+
+    <fragment
+        android:id="@+id/sendFormFragment"
+        android:name="com.suruhaja.ui.send.SendFormFragment"
+        android:label="Detail Kiriman"
+        tools:layout="@layout/fragment_send_form" />
+
+    <fragment
+        android:id="@+id/sendLocationFragment"
+        android:name="com.suruhaja.ui.send.SendLocationFragment"
+        android:label="Lokasi Kirim"
+        tools:layout="@layout/fragment_send_location" />
+
+</navigation>

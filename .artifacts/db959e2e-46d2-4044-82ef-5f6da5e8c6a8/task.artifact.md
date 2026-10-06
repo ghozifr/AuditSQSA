@@ -1,0 +1,4 @@
+- [x] Enable `buildConfig` in `app/build.gradle.kts`
+- [x] Sync Gradle
+- [x] Verify build
+- [x] Create walkthrough artifact

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brand_lavender">
+
+    <!-- Header -->
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_activity_history_card"
+        android:padding="11dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="4dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/brand_ink" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/poppins_black"
+        android:text="Detail Kiriman"
+        android:textColor="@color/brand_ink"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btn_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toTopOf="@id/btn_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="24dp">
+
+            <!-- BARANG -->
+            <TextView
+                style="@style/SendLabel"
+                android:text="NAMA BARANG" />
+            <EditText
+                android:id="@+id/et_item_name"
+                style="@style/SendInput"
+                android:hint="Contoh: Dokumen, Sepatu, Parcel"
+                android:inputType="text" />
+
+            <TextView
+                style="@style/SendLabel"
+                android:layout_marginTop="16dp"
+                android:text="DESKRIPSI BARANG" />
+            <EditText
+                android:id="@+id/et_item_desc"
+                style="@style/SendInput"
+                android:hint="Deskripsi singkat (opsional)"
+                android:inputType="textMultiLine"
+                android:minLines="2" />
+
+            <TextView
+                style="@style/SendLabel"
+                android:layout_marginTop="16dp"
+                android:text="BERAT (KG)" />
+            <EditText
+                android:id="@+id/et_weight"
+                style="@style/SendInput"
+                android:hint="Minimal 1 kg"
+                android:inputType="number" />
+
+            <!-- PENERIMA -->
+            <TextView
+                style="@style/SendSectionHeader"
+                android:text="Penerima" />
+            <TextView
+                style="@style/SendLabel"
+                android:text="NAMA PENERIMA" />
+            <EditText
+                android:id="@+id/et_receiver_name"
+                style="@style/SendInput"
+                android:hint="Nama penerima"
+                android:inputType="textPersonName" />
+
+            <TextView
+                style="@style/SendLabel"
+                android:layout_marginTop="16dp"
+                android:text="NO TELEPON PENERIMA" />
+            <EditText
+                android:id="@+id/et_receiver_phone"
+                style="@style/SendInput"
+                android:hint="08xx xxxx xxxx"
+                android:inputType="phone" />
+
+            <!-- PENGIRIM -->
+            <TextView
+                style="@style/SendSectionHeader"
+                android:text="Pengirim" />
+            <TextView
+                style="@style/SendLabel"
+                android:text="NAMA PENGIRIM" />
+            <EditText
+                android:id="@+id/et_sender_name"
+                style="@style/SendInput"
+                android:hint="Nama pengirim"
+                android:inputType="textPersonName" />
+
+            <TextView
+                style="@style/SendLabel"
+                android:layout_marginTop="16dp"
+                android:text="NO TELEPON PENGIRIM" />
+            <EditText
+                android:id="@+id/et_sender_phone"
+                style="@style/SendInput"
+                android:hint="08xx xxxx xxxx"
+                android:inputType="phone" />
+
+            <TextView
+                android:id="@+id/tv_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/poppins_bold"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/red_dark"
+                android:textSize="13sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Floating Lanjut button -->
+    <LinearLayout
+        android:id="@+id/btn_next"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/bg_send_primary_green"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_black"
+            android:text="Lanjut →"
+            android:textColor="@color/brand_ink"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

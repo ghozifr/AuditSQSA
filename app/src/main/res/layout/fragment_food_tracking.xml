@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brand_lavender">
+
+    <!-- Map -->
+    <fragment
+        android:id="@+id/map_view"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/status_card"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_activity_history_card"
+        android:paddingRight="4dp"
+        android:paddingBottom="4dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/brand_ink" />
+
+    <!-- Status card -->
+    <LinearLayout
+        android:id="@+id/status_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_location_picker_sheet"
+        android:elevation="12dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:background="@color/glass_border" />
+
+        <include
+            android:id="@+id/stepper"
+            layout="@layout/layout_phase_stepper" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_black"
+                    android:text="Memuat..."
+                    android:textColor="#E86E20"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_merchant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/brand_ink"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_black"
+                android:textColor="@color/brand_ink"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_delivery_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/text_muted"
+            android:textSize="11sp" />
+
+        <LinearLayout
+            android:id="@+id/items_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/layout_driver"
+            android:background="@drawable/bg_activity_history_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="44dp"
+                android:layout_height="44dp">
+
+                <TextView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_activity_stat_amber"
+                    android:gravity="center"
+                    android:text="🏍️"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/iv_driver_photo"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_driver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/brand_ink"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_driver_vehicle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/text_muted"
+                    android:textSize="11sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_payment_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_black"
+                android:textColor="#E86E20"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_driver_actions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView android:clickable="true" android:focusable="true" android:gravity="center"
+                android:id="@+id/btn_chat_driver"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_activity_history_card"
+                android:fontFamily="@font/poppins_black"
+                android:text="💬 Chat"
+                android:textAllCaps="false"
+                android:textColor="@color/brand_ink"
+                android:textSize="13sp" />
+
+            <TextView android:clickable="true" android:focusable="true" android:gravity="center"
+                android:id="@+id/btn_call_driver"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_food_primary_orange"
+                android:fontFamily="@font/poppins_bold"
+                android:text="📞 Hubungi"
+                android:textAllCaps="false"
+                android:textColor="@color/brand_ink"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView android:clickable="true" android:focusable="true" android:gravity="center"
+            android:id="@+id/btn_cancel_order"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_location_primary_coral"
+            android:fontFamily="@font/poppins_black"
+            android:text="Batalkan Pesanan"
+            android:textAllCaps="false"
+            android:textColor="@color/brand_ink"
+            android:textSize="14sp" />
+
+        <TextView android:clickable="true" android:focusable="true" android:gravity="center"
+            android:id="@+id/btn_finish"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_food_primary_orange"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Beri Rating"
+            android:textAllCaps="false"
+            android:textColor="@color/brand_ink"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <TextView android:clickable="true" android:focusable="true" android:gravity="center"
+            android:id="@+id/btn_pay_saldo"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_food_primary_orange"
+            android:fontFamily="@font/poppins_black"
+            android:text="BAYAR SEKARANG"
+            android:textAllCaps="true"
+            android:textColor="@color/brand_ink"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

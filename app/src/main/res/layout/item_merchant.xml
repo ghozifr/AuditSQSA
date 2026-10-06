@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="7dp"
+    android:background="@drawable/bg_activity_history_card"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/bg_activity_icon_well"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="🍱"
+            android:textSize="48sp" />
+
+        <ImageView
+            android:id="@+id/iv_merchant_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_merchant_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:background="@drawable/bg_activity_icon_well"
+            android:backgroundTint="@null"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:text="4.8"
+            android:textColor="@color/amber"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_merchant_closed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#99000000"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="Toko Sudah Tutup"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_merchant_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppins_bold"
+        android:maxLines="1"
+        android:text="Nama Toko"
+        android:textColor="@color/brand_ink"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_merchant_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:fontFamily="@font/poppins_bold"
+        android:text="0.5 km · 12 menit"
+        android:textColor="@color/text_muted"
+        android:textSize="11sp" />
+
+</LinearLayout>

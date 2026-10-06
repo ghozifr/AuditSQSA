@@ -1,0 +1,4 @@
+- `[x]` Modify `SuruhajaApp.kt` to use reflection for `DebugAppCheckProviderFactory`
+- `[x]` Verify release build (`./gradlew :app:compileReleaseKotlin`)
+- `[x]` Verify debug build (`./gradlew :app:compileDebugKotlin`)
+- `[x]` Create walkthrough artifact

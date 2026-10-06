@@ -1,0 +1,4 @@
+- [x] Fix invalid ID reference in `activity_main.xml`
+- [x] Fix argument default value in `nav_graph.xml`
+- [x] Ensure robust `MainActivity.kt` setup
+- [x] Verify build and fix any secondary issues

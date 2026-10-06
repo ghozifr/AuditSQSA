@@ -1,0 +1,5 @@
+- [x] Create `bg_search_home.xml`
+- [x] Create `bg_home_card_white.xml`
+- [x] Create `bg_service_item.xml`
+- [x] Redesign `fragment_home.xml`
+- [x] Verify build and layout

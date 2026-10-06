@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Pilo Brand Palette (Day / Light) -->
+    <color name="bg_card">#F2F8D3</color>
+    <color name="bg_app">@color/white</color>
+    <color name="brand">#388DF8</color>
+    <color name="brand_dark">#2AB2A6</color>
+    <color name="brand_light">#ECFCCB</color>
+
+    <!-- Reference design compatibility tokens. Kept as aliases for shared drawables. -->
+    <color name="brand_ink">#202020</color>
+    <color name="brand_lavender">#ECF0FC</color>
+    <color name="accent_blue">#3AB5F9</color>
+    <color name="bg_surface_blue">#EEF2FF</color>
+    <color name="bg_main">@color/white</color>
+    <color name="bg_dark">@color/white</color>
+    <color name="bg_surface_light">#F1F5F9</color>
+    <color name="bg_surface">@color/white</color>
+    <color name="bg_green">#2AB2A6</color>
+    <color name="stroke_border">#2F2F2F</color>
+
+    <color name="text_on_click">#C6FF2D</color>
+    <!-- Semantic Bento Colors (LIGHT) -->
+    <color name="surface_low">@color/white</color>
+    <color name="surface_high">@color/white</color>
+    <color name="glass_border">#2F2F2F</color>
+    <color name="accent_vibrant">#84CC16</color>
+    <color name="status_pending">#94A3B8</color>
+    <color name="status_accepted">#0EA5E9</color>
+    <color name="status_pickup">#818CF8</color>
+    <color name="status_completed">#65A30D</color>
+
+    <!-- Accents -->
+    <color name="purple">#818CF8</color>
+    <color name="coral">#FB7185</color>
+    <color name="amber">#FCB54B</color>
+    <color name="red_accent">#F43F5E</color>
+    <color name="red_dark">#E11D48</color>
+
+    <!-- Text — LIGHT -->
+    <color name="text_white">#0F172A</color>
+    <color name="text_muted">#64748B</color>
+
+    <!-- Aksen SuruhFood (dipakai label menu yang cocok saat pencarian) -->
+    <color name="food_orange_text">#E86E20</color>
+    <color name="food_orange_soft">#FFF1DD</color>
+    <!-- Aksen SuruhSend (label harga + dialog voucher) -->
+    <color name="send_green_text">#2FA85B</color>
+    <color name="text_white_dim">#94A3B8</color>
+    <color name="text_on_brand">#202020</color>
+
+    <color name="black">#181818</color>
+    <color name="white">#F7F8FA</color>
+
+    <!-- Glassmorphism Colors (LIGHT) -->
+    <color name="glass_bg">#B3FFFFFF</color>
+    <color name="glass_stroke">#E2E8F0</color>
+    <color name="glass_bg_subtle">#66FFFFFF</color>
+    <color name="glass_dark_bg">#4D0F172A</color>
+
+    <!-- Mesh Base Colors -->
+    <color name="mesh_1">#84CC16</color>
+    <color name="mesh_2">#818CF8</color>
+    <color name="mesh_3">#0EA5E9</color>
+</resources>

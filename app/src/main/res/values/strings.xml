@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SuruhAja</string>
+
+    <!-- Auth -->
+    <string name="auth_error_placeholder">Error message goes here</string>
+    <string name="auth_title_phone">VERIFIKASI NOMOR HP</string>
+    <string name="auth_subtitle_phone">Masukkan nomor HP untuk menerima kode verifikasi OTP</string>
+    <string name="auth_label_phone_number">PHONE NUMBER</string>
+    <string name="auth_btn_send_otp">Kirim Kode OTP</string>
+    <string name="auth_btn_sending">Mengirim...</string>
+    <string name="auth_title_otp">MASUKKAN KODE OTP</string>
+    <string name="auth_subtitle_otp_placeholder">Dikirim ke %1$s</string>
+    <string name="auth_label_otp">KODE OTP</string>
+    <string name="auth_hint_otp">123456</string>
+    <string name="auth_btn_verify_otp">Verifikasi OTP</string>
+    <string name="auth_btn_resend_otp">Belum terima kode? Kirim ulang</string>
+
+    <!-- Map & Navigation -->
+    <string name="desc_back">Kembali</string>
+    <string name="desc_my_location">Lokasi Saya</string>
+    <string name="desc_dest_pin">Pilih Tujuan</string>
+    <string name="btn_select_location">Pilih Lokasi Ini</string>
+</resources>

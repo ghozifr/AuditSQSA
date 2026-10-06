@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark">
+
+    <!-- ======== HEADER ======== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="12dp">
+
+        <TextView
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="‹"
+            android:textSize="30sp"
+            android:textColor="@color/text_white"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top Up Saldo"
+            android:textColor="@color/text_white"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_medium" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Balance -->
+            <TextView
+                android:id="@+id/tv_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saldo: —"
+                android:textColor="@color/brand"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins_medium" />
+
+            <!-- Amount input (Bento Input Card) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="20dp"
+                android:layout_marginTop="24dp">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nominal Top Up"
+                    android:textColor="@color/text_muted"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Grid of Nominals -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+                    
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:text="50K"
+                        android:gravity="center"
+                        android:background="@drawable/bg_input_dark"
+                        android:textColor="@color/text_white"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginEnd="6dp" />
+                        
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:text="100K"
+                        android:gravity="center"
+                        android:background="@drawable/bg_input_dark"
+                        android:textColor="@color/text_white"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginHorizontal="3dp" />
+                        
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:text="250K"
+                        android:gravity="center"
+                        android:background="@drawable/bg_input_dark"
+                        android:textColor="@color/text_white"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginStart="6dp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_input_dark"
+                    android:gravity="center_vertical"
+                    android:hint="Atau ketik nominal..."
+                    android:inputType="number"
+                    android:paddingHorizontal="16dp"
+                    android:textColor="@color/text_white"
+                    android:textColorHint="@color/text_muted"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Generate -->
+            <TextView
+                android:id="@+id/btn_generate"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="Buat QR Bayar"
+                android:textColor="@color/text_on_brand"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins_medium"
+                android:background="@drawable/bg_button_brand"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- QR area -->
+            <LinearLayout
+                android:id="@+id/qr_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:layout_width="280dp"
+                    android:layout_height="280dp"
+                    android:background="#FFFFFF"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:id="@+id/iv_qr"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="QR pembayaran" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_pay_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text=""
+                    android:textColor="@color/text_white"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_medium" />
+
+                <TextView
+                    android:id="@+id/tv_countdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textColor="@color/text_muted"
+                    android:textSize="13sp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textColor="@color/text_muted"
+                    android:textSize="13sp"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

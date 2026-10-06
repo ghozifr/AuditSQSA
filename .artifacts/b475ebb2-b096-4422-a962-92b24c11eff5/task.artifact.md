@@ -1,0 +1,5 @@
+- [x] Create `dialog_rating.xml`
+- [x] Add custom dialog theme to `themes.xml`
+- [x] Implement new rating dialog logic in `OrderTrackingFragment.kt`
+- [x] Set "Nanti Saja" default rating to 5
+- [x] Verify UI and logic

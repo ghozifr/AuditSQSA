@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingVertical="12dp">
+
+    <!-- Phase 1 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+        <View
+            android:id="@+id/step_1_dot"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/bg_food_dot_orange" />
+        <TextView
+            android:id="@+id/step_1_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mencari"
+            android:textSize="10sp"
+            android:textColor="@color/text_muted"
+            android:layout_marginTop="4dp"  android:fontFamily="@font/poppins_bold" android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_weight="0.5"
+        android:background="@color/glass_border" />
+
+    <!-- Phase 2 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+        <View
+            android:id="@+id/step_2_dot"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/bg_dot_notif"
+            android:backgroundTint="#D8DEF5" />
+        <TextView
+            android:id="@+id/step_2_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menjemput"
+            android:textSize="10sp"
+            android:textColor="@color/text_muted"
+            android:layout_marginTop="4dp"  android:fontFamily="@font/poppins_bold" android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_weight="0.5"
+        android:background="@color/glass_border" />
+
+    <!-- Phase 3 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+        <View
+            android:id="@+id/step_3_dot"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/bg_dot_notif"
+            android:backgroundTint="#D8DEF5" />
+        <TextView
+            android:id="@+id/step_3_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mengantar"
+            android:textSize="10sp"
+            android:textColor="@color/text_muted"
+            android:layout_marginTop="4dp"  android:fontFamily="@font/poppins_bold" android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

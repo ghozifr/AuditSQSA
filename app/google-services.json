@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "788148928744",
+    "project_id": "suruhaja-7c341",
+    "storage_bucket": "suruhaja-7c341.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788148928744:android:a6a7bed9e45cc6a773895d",
+        "android_client_info": {
+          "package_name": "com.suruhaja"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2b9CEThLSVjnFUyrVShIgETOsM_nmRKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788148928744:android:93159565b78e438473895d",
+        "android_client_info": {
+          "package_name": "com.suruhaja.driver"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2b9CEThLSVjnFUyrVShIgETOsM_nmRKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788148928744:android:06066ce619ea131e73895d",
+        "android_client_info": {
+          "package_name": "com.suruhaja.toko"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2b9CEThLSVjnFUyrVShIgETOsM_nmRKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
